@@ -1,8 +1,5 @@
 package com.mytest.data;
 
-import lombok.*;
-
-
 public class Hero
 {
      private Integer id;
