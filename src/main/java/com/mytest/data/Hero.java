@@ -2,17 +2,28 @@ package com.mytest.data;
 
 import lombok.*;
 
-@lombok.Getter
-@lombok.Setter
 
-@Builder(toBuilder = true)
-@ToString
-@EqualsAndHashCode
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Hero
 {
-    @Getter @Setter private String name;
-    @Getter @Setter private Integer id;
+     private String name;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    private Integer id;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Hero() {
     }

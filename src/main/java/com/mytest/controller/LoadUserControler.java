@@ -14,8 +14,9 @@ public class LoadUserControler {
     @RequestMapping(value="/getHeros",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
     public Hero[] getHeros()
     {
-        Hero[] listofHeros = new Hero[10];
-
+        Hero[] listofHeros = new Hero[2];
+        listofHeros[0] = generateHero("Mike Howard",250);
+        listofHeros[1] = generateHero("Bill War",1000);
         return listofHeros;
     }
 
@@ -24,5 +25,6 @@ public class LoadUserControler {
         Hero h = new Hero();
         h.setName(name);
         h.setId(id);
+        return h;
     }
 }
